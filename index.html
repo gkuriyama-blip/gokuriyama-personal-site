@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>栗山豪平 ｜ 仕事も、キャリアも、一緒に考え続ける。</title>
+<meta name="description" content="転職して終わりではなく、その後も一緒に考え続ける。紹介いただいた方だけをご支援しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFAF8;
+  --ink:#16181C;
+  --ink-2:#5B6068;
+  --ink-3:#8A8F96;
+  --rule:#DDDDD8;
+  --ai:#24405F;
+  --ai-soft:#E8EDF3;
+  --col:620px;
+  --gut:42px;
+  --mincho:"Shippori Mincho",serif;
+  --gothic:"Zen Kaku Gothic New",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--gothic);
+  font-size:16px;
+  font-weight:400;
+  line-height:2;
+  letter-spacing:.04em;
+  font-feature-settings:"palt" 1;
+}
+.wrap{
+  max-width:calc(var(--col) + var(--gut));
+  margin:0 auto;
+  padding:0 22px;
+}
+
+/* the spine */
+.spine{
+  position:relative;
+  padding-left:var(--gut);
+}
+.spine::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:1px;
+  background:var(--rule);
+  transform-origin:top;
+}
+@media (prefers-reduced-motion: no-preference){
+  .spine::before{animation:draw 1.4s cubic-bezier(.22,.61,.36,1) both}
+  @keyframes draw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+}
+
+section{padding:76px 0}
+section:first-child{padding-top:64px}
+
+h1,h2,h3{font-family:var(--mincho);font-weight:500;letter-spacing:.02em}
+h1{
+  font-size:clamp(26px,3.4vw,34px);
+  line-height:1.7;
+  margin-bottom:30px;
+}
+h2{
+  font-size:clamp(20px,2.2vw,23px);
+  line-height:1.8;
+  margin-bottom:30px;
+}
+h3{
+  font-size:17px;
+  line-height:1.8;
+  margin-bottom:4px;
+}
+p{margin-bottom:1.55em;font-size:clamp(15.5px,1.1vw,16px)}
+p:last-child{margin-bottom:0}
+.lead{font-size:17px}
+.q{
+  font-family:var(--mincho);
+  font-size:clamp(17px,1.4vw,19px);
+  line-height:1.95;
+  margin:38px 0;
+  color:var(--ai);
+}
+.sub{color:var(--ink-2);font-size:14px;line-height:1.95}
+.tight{margin-bottom:.5em}
+.tight+.tight{margin-bottom:.5em}
+
+/* section marker on the spine */
+.mark{position:relative}
+.mark::before{
+  content:"";
+  position:absolute;
+  left:calc(-1 * var(--gut) - 3px);
+  top:90px;
+  width:7px;height:7px;
+  border-radius:50%;
+  background:var(--paper);
+  border:1px solid var(--rule);
+}
+
+/* timeline */
+.tl{margin:6px 0 0}
+.tl-item{
+  position:relative;
+  padding-bottom:46px;
+}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";
+  position:absolute;
+  left:calc(-1 * var(--gut) - 4px);
+  top:9px;
+  width:9px;height:9px;
+  border-radius:50%;
+  background:var(--paper);
+  border:1px solid var(--ai);
+}
+.tl-item.pivot::before{
+  background:var(--ai);
+  border-color:var(--ai);
+  width:11px;height:11px;
+  left:calc(-1 * var(--gut) - 5px);
+}
+.tl-item .sub{font-size:14px}
+.pivot .note{
+  display:inline-block;
+  margin-top:8px;
+  font-size:13px;
+  color:var(--ai);
+  background:var(--ai-soft);
+  padding:3px 11px;
+  border-radius:3px;
+  letter-spacing:.03em;
+}
+.tl-tail{
+  position:relative;
+  height:56px;
+}
+.tl-tail::before{
+  content:"";
+  position:absolute;
+  left:calc(-1 * var(--gut));
+  top:0;height:100%;width:1px;
+  background:linear-gradient(var(--rule),transparent);
+}
+.tl-tail span{
+  position:absolute;top:6px;left:0;
+  font-size:13.5px;color:var(--ink-3);
+}
+
+/* about */
+.portrait-row{
+  display:flex;
+  align-items:flex-end;
+  gap:26px;
+  flex-wrap:wrap;
+  margin-bottom:34px;
+}
+.portrait-row img{
+  width:290px;
+  max-width:100%;
+  height:auto;
+  display:block;
+  mix-blend-mode:multiply;
+  mask-image:linear-gradient(#000 72%,transparent 99%);
+  -webkit-mask-image:linear-gradient(#000 72%,transparent 99%);
+}
+.portrait-row .name{
+  font-family:var(--mincho);
+  font-size:15px;
+  color:var(--ink-2);
+  letter-spacing:.12em;
+  margin-bottom:14px;
+}
+
+/* cta */
+.cta{padding-bottom:96px}
+.btn{
+  display:inline-block;
+  background:var(--ai);
+  color:#fff;
+  text-decoration:none;
+  font-size:16px;
+  letter-spacing:.06em;
+  padding:16px 40px;
+  border-radius:4px;
+  margin:12px 0 26px;
+  transition:background .18s ease;
+}
+.btn:hover{background:#16293E}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+footer{
+  border-top:1px solid var(--rule);
+  padding:30px 0 54px;
+  font-size:13px;
+  color:var(--ink-3);
+  letter-spacing:.05em;
+}
+
+@media (max-width:600px){
+  :root{--gut:26px}
+  body{font-size:15.5px;line-height:1.95}
+  .q{font-size:17px}
+  section{padding:62px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<div class="spine">
+
+<section class="hero">
+  <h1>仕事も、キャリアも、<br>一緒に考え続ける。</h1>
+  <p class="lead">はじめまして。栗山豪平と申します。</p>
+  <p class="lead">大学在学中から人材の仕事に関わり、プレイヤー、マネージャーを経験して、今は事業責任者として仕事をしています。</p>
+  <p class="lead">これまで仕事をする中で、うまくいったことも、失敗したことも、たくさんありました。その中で学んできたことや、経験してきたことを、自分の中だけに置いておくのではなく、これから出会う人たちに惜しみなく使っていきたいと思っています。</p>
+  <p class="q">今の仕事がしんどい。この先どうしたいのか分からない。誰に相談すればいいのかも分からない。そういう時期は、たいていの人にあります。僕にもありました。</p>
+  <p class="lead">キャリアのこと、採用のこと、人材のこと。この領域はこれまで1500名以上の相談を受けてきたので、たいていのことは答えられます。そこは遠慮なく頼ってください。</p>
+  <p class="lead">そのうえで、変化の早い時代だからこそ、一方的に何かを教えるような関係ではなく、お互いに考え、刺激をもらいながら、一緒に成長していける関係が理想だと思っています。</p>
+  <p class="lead" style="margin-bottom:0">このページは、紹介をきっかけにお会いする方に向けて書いています。</p>
+</section>
+
+<section class="mark">
+  <p>転職先を紹介して、入社したら終わり。</p>
+  <p>僕は、そういう関係ではなく、その後もお互いの仕事や人生について話せる関係を作りたいと思っています。</p>
+  <p>僕自身もまだ20代です。</p>
+  <p>プレイヤーとして働き、マネージャーを経験し、今は事業責任者として仕事をしています。</p>
+  <p>もちろん、何かをやり切ったわけではありません。今も毎日のように目の前の課題にぶつかっています。</p>
+  <p>チームのことだったり、事業の判断だったり。というより、自分自身のことで詰まっている時間が一番長い気がします。どうすればもっと良い仕事ができるんだろう、と今も考え続けています。</p>
+  <p>だからこそ、これまで仕事をする中で経験してきたことや、失敗したこと、学んできたことを、同じ20代で仕事に向き合っている人たちと共有したいと思うようになりました。</p>
+  <p class="q" style="margin-bottom:0">僕が一方的に何かを教えるというよりも、お互いに仕事を頑張りながら、ときどき立ち止まって話せる。そんな関係を作りたいと思っています。</p>
+</section>
+
+<section class="mark">
+  <h2>転職は、その関係の入り口だと思っています</h2>
+  <p>僕は大学在学中から人材紹介の仕事に関わってきました。たくさんの転職に関わる中で、ずっと感じてきたことがあります。</p>
+  <p>それは、転職先が決まった瞬間よりも、入社した後の方が圧倒的に大事だということです。</p>
+  <p>新しい会社に入れば、当然うまくいかないことがあります。</p>
+  <p>成果が出ない時期が続いたり、上司と噛み合わなかったり。思っていた仕事と違う、と感じることもある。周りと比べて焦っているうちに、うまくいかない理由が全部、自分の力不足のように思えてくる。</p>
+  <p>僕自身も、仕事をする中で何度も同じような壁にぶつかってきました。</p>
+  <p>だから、転職を支援した人と入社した瞬間に関係が終わってしまうことに、ずっと違和感がありました。</p>
+  <p>せっかく縁があって出会ったのであれば、転職するときだけではなく、入社した後も話したい。うまくいったことも、うまくいかなかったことも聞きたい。</p>
+  <p>僕が経験してきたことで役に立つものがあれば共有したいし、逆に僕自身もみなさんから学びたい。</p>
+  <p style="margin-bottom:0">僕にとって転職支援は、そんな関係を作る一つの入り口です。</p>
+</section>
+
+<section class="mark">
+  <h2>支援の流れ</h2>
+  <div class="tl">
+    <div class="tl-item">
+      <h3>まず話す</h3>
+      <p class="sub">転職するかどうかは決まっていなくて大丈夫です。1年前からのご相談でも構いません。</p>
+    </div>
+    <div class="tl-item">
+      <h3>一緒に考える</h3>
+      <p class="sub">転職した方がいいなら会社を探します。動かない方がいいなら、それも一緒に考えます。</p>
+    </div>
+    <div class="tl-item pivot">
+      <h3>入社</h3>
+      <p class="sub">一般的な転職支援は、ここで終わります。</p>
+      <span class="note">ここは通過点です</span>
+    </div>
+    <div class="tl-item">
+      <h3>メンターとして関わる</h3>
+      <p class="sub">目の前の課題からキャリア、仕事以外のことまで。期限は設けていません。</p>
+    </div>
+  </div>
+  <div class="tl-tail"><span>ここから先も、続きます。</span></div>
+</section>
+
+<section class="mark">
+  <h2>入社した後は、メンターとして関わります</h2>
+  <p>希望する方とは、転職した後もメンターとして継続的に関わっています。扱う範囲は、だいたいこのあたりです。</p>
+  <p>ひとつは、目の前の課題の解決。成果が出ない、上司と噛み合わない、任された仕事が重すぎる。何が起きているのかを一緒に整理して、次に何をするかまで落とします。</p>
+  <p>ふたつめは、これからのキャリア。今の会社で何を積むべきか、次にどこへ向かうのか。転職を前提にせず、長い目で考えます。</p>
+  <p>みっつめは、仕事以外のことです。お金のこと、住む場所、家族やパートナーのこと、何歳までにどうなっていたいか。仕事の話だけで人生は決まらないので、こういう話も普通にします。相談というより、ただ話すだけの時間になることも多いです。</p>
+  <p>とはいえ、いつも重い話をするわけではありません。</p>
+  <p class="q">最近仕事どう？</p>
+  <p>から始まって、一緒に考えたり、僕だったらどうするかを話したり、必要であれば率直に意見を伝えたりします。</p>
+  <p>僕自身、プレイヤー、マネージャー、事業責任者と立場が変わるたびに、仕事の見え方も悩みも変わってきました。今も新しい課題にぶつかり続けています。だから、知らないことは知らないと言いますし、一緒に考えます。</p>
+  <p>話す場所は、オンラインでも、カフェなどで直接会っても構いません。文字や画面越しだと伝わりにくいこともあるので、近くにいるなら会って話す方が早い気がしています。</p>
+  <p style="margin-bottom:0">費用は一切いただきません。転職のご支援から入社後の関わりまで、すべて無料です。</p>
+</section>
+
+<section class="mark">
+  <h2>転職しない、という話になることもあります</h2>
+  <p>相談をもらったからといって、必ず転職を勧めるわけではありません。</p>
+  <p>話してみた結果、「今の会社でもう少し頑張った方がいいと思う」と伝えることもあります。</p>
+  <p>転職自体が目的ではないからです。</p>
+  <p>転職した方がいいなら一緒に会社を探す。まだ動かない方がいいなら、それも一緒に考える。1年後にまた話すでもいいと思っています。</p>
+  <p style="margin-bottom:0">長く付き合う前提だからこそ、そのとき一番良いと思うことを率直に話したいと思っています。</p>
+</section>
+
+<section class="mark">
+  <h2>紹介いただいた方だけを<br>ご支援しています</h2>
+  <p>現在は、知人やこれまでご支援した方から紹介いただいた方だけをお受けしています。</p>
+  <p class="q">理由はシンプルで、一人ひとりと、長く付き合いたいからです。</p>
+  <p>転職相談だけなら、もっと多くの方と話せると思います。</p>
+  <p>ただ、入社した後のことまで聞いたり、定期的に話したり、一人ひとりのことをちゃんと覚えていたいと思うと、どうしても人数には限りがあります。</p>
+  <p style="margin-bottom:0">なので、今は紹介という形にしています。</p>
+</section>
+
+<section class="mark">
+  <h2>僕について</h2>
+  <div class="portrait-row">
+    <img src="assets/gohei-portrait.png" alt="栗山豪平" width="290">
+    <p class="name">栗山 豪平</p>
+  </div>
+  <p>大学在籍中に株式会社ミギナナメウエへ入社。人材紹介事業の立ち上げに携わり、その後マネージャーとして事業運営を経験しました。</p>
+  <p>2024年からは、会社の主軸となる事業をもう一つ増やすための新規事業として、キャリアコーチング事業を立ち上げました。社内で初めての新規事業で、その責任者を任せてもらっています。これまで1500名ほどのキャリア支援に関わってきました。</p>
+  <p>ただ、僕自身はまだキャリアの途中です。事業責任者になった今も、できないことだらけです。</p>
+  <p>マネジメントで悩むし、意思決定を間違えることもあります。自分の弱さに気づかされるのは、だいたい後になってからです。</p>
+  <p>そのたびに本を読んだり、人に教えてもらったり、心理学や哲学を学んだりしながら、自分なりに仕事と向き合っています。</p>
+  <p>そうやって自分が学んできたことを、自分の中だけに置いておくのではなく、同じように20代で仕事に向き合っている人たちに還元したい。そして僕自身も、みなさんの挑戦から学びたい。</p>
+  <p style="margin-bottom:0">そんな気持ちで、この活動をしています。</p>
+</section>
+
+<section class="mark cta">
+  <h2>同じ20代として、<br>一緒に強くなっていけたら。</h2>
+  <p class="tight">転職したい人も。</p>
+  <p class="tight">今の会社でもう少し頑張りたい人も。</p>
+  <p>これから何をしたいのか分からない人も。</p>
+  <p>紹介をきっかけに出会ったのであれば、まずは一度話しましょう。転職するかどうかは、それから一緒に考えればいいと思っています。</p>
+  <p><a class="btn" href="https://line.me/ti/p/XPenCbmBM3">LINEで追加する</a></p>
+  <p class="sub" style="margin-bottom:0">友だち追加のあと、「〇〇さんの紹介です」とだけ送ってください。そこからお話ししましょう。</p>
+</section>
+
+</div>
+
+<footer>栗山 豪平</footer>
+</div>
+
+</body>
+</html>
